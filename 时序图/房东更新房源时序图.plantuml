@@ -1,0 +1,39 @@
+@startuml
+header 房东更新房源
+participant c as "房东"
+participant s as "房源更新系统"
+participant d as "房源信息数据库"
+
+
+c -> s: 房源信息更新请求(附带房源信息)
+activate s
+
+s -> d: 查询房源是否空闲
+activate d
+d --> s: 返回是否空闲
+deactivate d
+
+alt 房源空闲
+
+    s -> d: 修改数据库中的房源信息
+    activate d
+    d --> s: 返回修改信息
+    deactivate d
+    s --> c: 返回房源更新信息
+
+
+else 房源已出租
+    s --> c: 房源已出租，无法修改
+    deactivate s
+end
+
+
+
+
+
+
+
+
+
+
+@enduml

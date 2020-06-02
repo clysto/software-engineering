@@ -1,0 +1,43 @@
+@startuml
+header 用户注册时序图
+participant c as "用户"
+participant s as "注册系统"
+participant d as "用户信息数据库"
+
+
+c -> s: 注册请求（账号（用户名）+密码+手机号+邮箱）
+activate s
+
+s -> d: 验证是否有已存在的账号
+activate d
+deactivate s
+
+d --> s: 返回验证信息
+deactivate d
+activate s
+
+alt 该账号已存在
+
+    c <-- s: 注册失败，账号已存在
+    activate c
+
+else 该账号可以使用
+    deactivate c
+    
+    s -> d: 在数据库中添加新用户的信息
+    deactivate s
+    activate d
+
+end
+
+d --> s:添加成功
+deactivate d
+activate s
+
+s --> c:注册成功
+deactivate s
+
+
+
+
+@enduml

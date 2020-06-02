@@ -1,0 +1,35 @@
+@startuml
+header 用户登录时序图
+participant c as "用户"
+participant s as "登录控制"
+participant d as "用户信息数据库"
+
+
+c -> s: 登录请求（账号+密码）
+activate s
+
+s -> d: 获取用户信息信息token
+activate d
+deactivate s
+
+d --> s: 返回用户信息token
+deactivate d
+activate s
+
+alt 信息一致
+
+    c <-- s: 返回登录成功
+    activate c
+
+else 信息不一致或其他情况
+    deactivate c
+    
+    c <-- s: 用户名或密码不正确
+    deactivate s
+    activate c
+end
+
+
+
+
+@enduml

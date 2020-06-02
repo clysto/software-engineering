@@ -1,0 +1,50 @@
+@startuml
+header 订房时序图
+participant c as "房客"
+participant s as "订房系统"
+participant d as "房源信息数据库"
+participant d1 as "房客信息数据库"
+
+
+c -> s: 房源查询请求
+activate s
+
+s -> d: 获取房源信息
+activate d
+
+
+d --> s: 返回房源信息
+deactivate d
+
+
+s --> c: 返回房源信息
+deactivate s
+
+
+
+c -> s: 订房请求
+activate s
+
+s -> d1: 余额查询
+activate d1
+d1 --> s: 返回房客余额信息
+deactivate d1
+
+alt 余额 < 房价
+    s-->c:余额不足，订房失败
+
+else 余额 >= 房价
+    s -> d1 :修改余额
+    activate d1
+
+    d1 --> s:返回修改信息
+    deactivate d1
+
+    s -->c:订房成功
+    deactivate s
+
+end
+
+
+
+@enduml
