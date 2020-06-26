@@ -1,6 +1,7 @@
 @startuml 类图
 
 skinparam shadowing false
+skinparam defaultFontName "微软雅黑"
 
 abstract 用户{
 	- 账号

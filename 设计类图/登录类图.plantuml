@@ -1,6 +1,7 @@
 @startuml 登录类图
 
 skinparam shadowing false
+skinparam defaultFontName "微软雅黑"
 
 class  登录子系统{
     - 账号

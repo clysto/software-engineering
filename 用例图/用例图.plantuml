@@ -1,6 +1,7 @@
 @startuml 用例图
 
 skinparam shadowing false
+skinparam defaultFontName "微软雅黑"
 
 actor 房客
 actor 房东

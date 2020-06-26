@@ -1,6 +1,7 @@
 @startuml 房东更新房源时序图
 
 skinparam shadowing false
+skinparam defaultFontName "微软雅黑"
 
 participant c as "房东"
 participant s as "房源更新系统"

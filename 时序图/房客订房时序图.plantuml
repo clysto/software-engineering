@@ -1,6 +1,7 @@
 @startuml 房客订房时序图
 
 skinparam shadowing false
+skinparam defaultFontName "微软雅黑"
 
 participant c as "房客"
 participant s as "订房系统"

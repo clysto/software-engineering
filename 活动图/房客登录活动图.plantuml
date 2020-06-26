@@ -1,6 +1,7 @@
 @startuml 房客登录活动图
 
 skinparam shadowing false
+skinparam defaultFontName "微软雅黑"
 
 |用户|
 start

@@ -1,6 +1,7 @@
 @startuml 用户登录时序图
 
 skinparam shadowing false
+skinparam defaultFontName "微软雅黑"
 
 participant c as "用户"
 participant s as "登录控制"

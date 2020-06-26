@@ -1,6 +1,8 @@
 @startuml 房客预定类图
 
 skinparam shadowing false
+skinparam defaultFontName "微软雅黑"
+
 
 class  用户{
     - 账号
