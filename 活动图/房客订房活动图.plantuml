@@ -1,6 +1,7 @@
 @startuml 房客订房活动图
-header 房客订房活动图
-footer 房客订房活动图
+
+skinparam shadowing false
+
 |用户|
 start
 :进入搜索界面]

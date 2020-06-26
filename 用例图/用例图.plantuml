@@ -1,5 +1,7 @@
 @startuml 用例图
 
+skinparam shadowing false
+
 actor 房客
 actor 房东
 actor 用户

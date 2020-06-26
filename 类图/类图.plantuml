@@ -1,6 +1,8 @@
-@startuml
+@startuml 类图
 
-class 用户{
+skinparam shadowing false
+
+abstract 用户{
 	- 账号
     - 密码
     - 手机号
@@ -11,7 +13,7 @@ class 用户{
     # 订单管理()
 }
 
-abstract 房东 {
+class 房东 {
     - 收入明细
 
     + 上架房源()
@@ -20,13 +22,27 @@ abstract 房东 {
     + 下架()
     + 退款处理()
 }
-abstract 房客 {
+
+class 房客 {
     - 余额查询
 
     + 检索民宿()
     + 预订民宿()
     + 服务评价()
     + 退款()
+}
+
+class 订单 {
+    + 创建订单()
+    + 检索订单()
+    + 取消订单()
+}
+
+class 房源 {
+    + 添加房源()
+    + 下架房源()
+    + 评价房源()
+    + 预定房源()
 }
 
 房东 -up-|> 用户
