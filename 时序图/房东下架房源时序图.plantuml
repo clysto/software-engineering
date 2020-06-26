@@ -1,5 +1,7 @@
-@startuml
-header 房东下架房源
+@startuml 房东下架房源时序图
+
+skinparam shadowing false
+
 participant c as "房东"
 participant s as "房源更新系统"
 participant d as "房源信息数据库"

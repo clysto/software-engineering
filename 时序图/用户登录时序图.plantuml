@@ -1,5 +1,7 @@
-@startuml
-header 用户登录时序图
+@startuml 用户登录时序图
+
+skinparam shadowing false
+
 participant c as "用户"
 participant s as "登录控制"
 participant d as "用户信息数据库"

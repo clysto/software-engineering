@@ -1,4 +1,7 @@
-@startuml
+@startuml 注册类图
+
+skinparam shadowing false
+
 class 用户 <<注册子系统>>{
     - 账号
     - 密码
@@ -7,7 +10,6 @@ class 用户 <<注册子系统>>{
 
     # 注册账号()
     # 接收注册结果()
-
 }
 
 class 注册系统 {
@@ -19,11 +21,5 @@ class 注册系统 {
 }
 
 注册系统 "1" -up- "1" 用户
-
-
-
-
-
-
 
 @enduml

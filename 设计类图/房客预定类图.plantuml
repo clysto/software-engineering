@@ -1,11 +1,11 @@
-@startuml
+@startuml 房客预定类图
+
+skinparam shadowing false
+
 class  用户{
     - 账号
     - 密码
-
 }
-
-
 
 class 房客{
     - 余额

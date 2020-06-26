@@ -1,5 +1,7 @@
-@startuml
-header 订房时序图
+@startuml 房客订房时序图
+
+skinparam shadowing false
+
 participant c as "房客"
 participant s as "订房系统"
 participant d as "房源信息数据库"
