@@ -1,0 +1,19 @@
+@startuml 房东上架房源时序图
+
+skinparam shadowing false
+skinparam defaultFontName "微软雅黑"
+
+participant c as "房东"
+participant s as "房源更新系统"
+participant d as "房源信息数据库"
+
+c -> s: 房源上架请求(附带房源信息)
+activate s
+
+s -> d: 修改数据库中的房源信息
+activate d
+d --> s: 返回修改信息
+deactivate d
+s --> c: 返回房源更新信息
+
+@enduml
