@@ -21,3 +21,4 @@ out
 *.png
 *.jpg
 /bin
+!/文档/tex/cover.pdf

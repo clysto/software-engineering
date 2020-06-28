@@ -10,12 +10,23 @@
 
 % 本文档命令
 \usepackage[section]{placeins}
+\usepackage[final]{pdfpages}
+\usepackage{array}
 \graphicspath{{../../活动图/out/}{../../类图/out/}{../../设计类图/out/}{../../时序图/out/}{../../用例图/out/}}
+\renewcommand{\listfigurename}{\mbox{}\hfill 插图 \hfill\mbox{}}
+\renewcommand{\contentsname}{\mbox{}\hfill 目录 \hfill\mbox{}}
+\hypersetup{hidelinks}
+
 \begin{document}
+
+\includepdf[]{cover.pdf}
+
+\tableofcontents
+\listoffigures
 
 \maketitle
 
-\section{需求分析}
+\section{需求分析及开发背景}
 
 \subsection{绪论}
 
@@ -326,5 +337,25 @@ second)的概念，我们来衡量系统的负载能力。通常的对于一个�
     \caption{房源管理活动图}
     \label{fig:房源管理活动图}
 \end{figure}
+
+\section{课程设计心得及分工}
+
+本次课程设计我们使用了\href{https://plantuml.com/zh/}{\textbf{plantuml}}这个工具来绘制uml图形，使用plantuml使我们可以将文本文件编译成精美的uml图片，同时plantuml支持非常多种类的图形绘制极大的加快了建模的过程。我们小组使用GitHub在疫情期间远程协作完成此次课程设计，所有的uml图片源码和需求分析文档都在\href{https://github.com/clysto/software-engineering}{\textbf{https://github.com/clysto/software-engineering}}这个项目中。
+
+\subsection{心得}
+
+在本次软件工程课程设计的过程中，我们将所学的理论知识与实际应用联系了起来，加深了对软件工程流程以及思想的理解。这次课设加深了我们对时序图、类图、用例图、活动图的认识以及它们各自的特点和使用方法，也提高了我们对软件开发的设计能力，以及绘制UML图的技能。小组合作模式，团队明确的分工和有效合作使任务清晰明了。我组首次尝试了在GitHub上构建项目流程，在很大的程度上提高了工作效率。
+
+
+\subsection{分工}
+
+\noindent
+\begin{tabular}{@{}llp{10cm}}
+    姓名 & 学号 & 分工\\ 
+    王宇航 & 9173011818 &  部分用例图的补充、类图的设计与绘制、时序图的设计与绘制、对应部分报告的编写\\ 
+    毛亚琛 & 9173011613 &  用例图的设计与绘制、GitHub项目的构建、对应部分报告的编写、总体报告排版与整理\\ 
+    朱志畅 & 30217331   &  活动图的设计与绘制、项目背景的提出、需求分析、功能分析、性能分析、对应部分报告的编写\\ 
+\end{tabular}
+
 
 \end{document}
